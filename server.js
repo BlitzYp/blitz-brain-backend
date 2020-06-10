@@ -42,8 +42,8 @@ app.post("/imageurl", (req,res) => { image.handleAPICall(req,res) })
 //     // res = false
 // });
 
-app.listen(3000, () => {
-    console.log("Everything is working")
+app.listen(process.env.PORT || 3000, () => {
+    console.log(`Everything is working on port ${process.env.PORT}`)
 })
 
 
