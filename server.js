@@ -20,7 +20,7 @@ const app = express();
 // app.use(express.urlencoded({extended: false}));
 app.use(express.json());
 app.use(cors());
- 
+
 app.get("/", (req, res) => { res.send("Epic! Everything is working!") })
 app.post("/signin", signin.handleSignIn(db, bcrypt))
 app.post("/register", (req, res) => { register.handleRegister(req, res, db, bcrypt) })
@@ -43,7 +43,6 @@ app.post("/imageurl", (req, res) => { image.handleAPICall(req, res) })
 app.listen(process.env.PORT || 3000, () => {
   console.log(`Everything is working on port ${process.env.PORT}`)
 })
-
 
 /*
 / => res = this is working
